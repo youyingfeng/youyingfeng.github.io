@@ -1,0 +1,52 @@
+body{
+  margin: 40px auto;
+  max-width: 1200px;
+  line-height: 1.6;
+  color: #454545;
+  padding: 0 10px;
+  font-family: "Lucida Sans Unicode";
+  font-size: 18px;
+
+}
+
+
+
+/*hyperlink colors*/
+
+a:link{
+  color: #07a;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #ac5a82;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+/*div declarations*/
+.project-information{
+  width: 200px;
+  background-color: #333333;
+  margin: auto;
+  float: left;
+  position: relative;
+
+}
+
+.project-gallery{
+  width: 600px;
+  background-color: #888888;
+  margin: auto;
+  float: right;
+  text-align: center;
+}
+
+.image-wrapper{
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 10px;
+}
