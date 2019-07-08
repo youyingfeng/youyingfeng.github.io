@@ -1,11 +1,12 @@
 body{
-  margin: 40px auto;
+  margin: auto;
   max-width: 1200px;
   line-height: 1.6;
   color: #454545;
   padding: 0 10px;
   font-family: "Lucida Sans Unicode";
   font-size: 18px;
+  overflow-y: scroll; /*this is to stop scrollbar from resizing the fucking page*/
 }
 
 /*hyperlink colors*/
@@ -23,10 +24,40 @@ a:visited{
 a:hover{
   text-decoration: underline;
 }
+/*div declarations for navbar*/
+.navbar{
+  max-width: 1200px;
+  height: 18%;
+  background-color: #888888;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+
+}
+
+.links{
+  word-spacing: 0.5em;
+}
+
+.links a{ /* apparently a.links only works if i define class=links for anchor tags*/
+  color: transparent; /*hide text and enable text shadow to display text*/
+  text-shadow: 0 0 0 #454545;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /*div declarations for index*/
+.index{
+  width: 100%;
+  height: 100%;
+  background-color:#888888;
+}
+
+/*div declarations for projects*/
 .project{
-  width: 360px;
+  width: 380px;
   height: 450px;
 }
 
@@ -37,7 +68,7 @@ a.project{
 }
 
 a.project:hover .project-thumbnail{
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .project-tile{
@@ -45,7 +76,7 @@ a.project:hover .project-thumbnail{
   height: 380px;
 
 }
-.project-thumbnail{
+.project-thumbnail{ /*use as class for peektures only*/
   width: 380px;
   height: 380px;
   display: inline-block;
@@ -53,36 +84,50 @@ a.project:hover .project-thumbnail{
   transition: opacity 0.2s;
 }
 
+
+/*thumbnails are actual 380px but divs are not 1200px since its only max specified 1200px*/
 .project-title{
   text-align: center;
 }
 
 .project-wrapper{
+  margin-top: 40px;
   max-width: 1200px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  float: center;
 }
 
 /*div declarations for projects*/
+.project-container{
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+
 .project-information{
-  width: 200px;
-  background-color: #333333;
+  width: 29%;
   margin: auto;
-  float: center;
-  position: relative;
+  float: left;
+  position: sticky;
+  top: 0px;
+  margin-right: 1%;
+  word-wrap: normal;
 }
 
 .project-gallery{
-  width: 600px;
-  background-color: #888888;
+  width: 70%;
   margin: auto;
   float: right;
   text-align: center;
 }
 
-.image-wrapper{
-  display: inline-block;
+.image-wrapper img{
+  display: block;
+  width: 100%;
+  height: auto;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
