@@ -206,29 +206,15 @@ a.project:hover .project-thumbnail{
 
 .contact-list{
   margin: 0 auto;
+  font-size: 48px;
 }
 
-.icon-flickr{
-  list-style: none;
-  background-image: url("../fontawesome/svgs/solid/envelope-square.svg");
-  margin: 0;
-	padding: 36px 0 36px 84px;
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: 40px;
+.contact-link{
+  margin-top: 100px;
 }
-.icon-mail{
-  list-style: none;
-  background-image: url("../fontawesome/svgs/solid/envelope-square.svg");
-  margin: 0;
-	padding: 36px 0 36px 84px;
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: 40px;
 
+.icon{
+  height: 72px;
+  width: 72px;
+  vertical-align: middle;
 }
-/*
-.contact-list ul li:nth-child(3){
-  list-style-image: url("../fontawesome/svgs/brands/flickr.svg");
-}
-*/
