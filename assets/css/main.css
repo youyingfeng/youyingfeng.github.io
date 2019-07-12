@@ -1,15 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text&display=swap");
+
+html{
+  min-height: 100%;
+}
+
 body{
   margin: auto;
   max-width: 1200px;
+  height: 100%;
+  min-height: 100%;
   line-height: 1.6;
   color: #454545;
   padding: 0 10px;
   font-family: "Lucida Sans Unicode";
   font-size: 18px;
   overflow-y: scroll; /*this is to stop scrollbar from resizing the fucking page*/
+  outline: none;
 }
 
 /*hyperlink colors*/
+a{
+  outline: none;
+}
 
 a:link{
   color: #07a;
@@ -28,34 +40,80 @@ a:hover{
 .navbar{
   max-width: 1200px;
   height: 18%;
-  background-color: #888888;
   display: flex;
   justify-content: space-between;
+  line-height: 1.0;
+  padding-top: 10px;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .logo{
+  font-family: 'Libre Barcode 128 Text', cursive;
+  font-size: 48px;
+  color: #000000; /*hide text and enable text shadow to display text*/
+  cursor: pointer;
 
 }
 
+.logo a:link, a:visited, a:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
 .links{
-  word-spacing: 0.5em;
+  word-spacing: 2.0em;
 }
 
 .links a{ /* apparently a.links only works if i define class=links for anchor tags*/
   color: transparent; /*hide text and enable text shadow to display text*/
-  text-shadow: 0 0 0 #454545;
+  text-shadow: 0 0 0 #999999;
   text-decoration: none;
   cursor: pointer;
 }
 
-/*div declarations for index*/
-.index{
-  width: 100%;
-  height: 100%;
-  background-color:#888888;
+.links a:hover{
+  text-shadow: 0 0 0 #454545;
 }
 
-/*div declarations for projects*/
+#current-page{/*class doesnt work because of some specificity shit*/
+  text-shadow: 0 0 0 #454545;
+}
+
+.footer{
+  font-size: 12px;
+  position: relative;
+  bottom: 0;
+}
+
+/*div declaration for about*/
+.about{
+  width: 48%;
+  height: auto;
+  float: left;
+  padding-right: 2%;
+  text-align: justify;
+}
+
+.portrait{
+  width: 48%;
+  height: auto;
+  float: right;
+  text-align: right;
+  overflow: hidden;
+  padding-left: 2%;
+}
+
+.portrait img{
+  width: 100%;
+  height: auto;
+}
+/*div declarations for project menu*/
 .project{
   width: 380px;
   height: 450px;
@@ -93,11 +151,18 @@ a.project:hover .project-thumbnail{
 .project-wrapper{
   margin-top: 40px;
   max-width: 1200px;
-  height: auto;
+  min-height: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   float: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 /*div declarations for projects*/
@@ -105,16 +170,16 @@ a.project:hover .project-thumbnail{
   width: 100%;
   height: 100%;
   bottom: 0;
+  padding-top: 2%;
 }
 
 .project-information{
   width: 29%;
   margin: auto;
   float: left;
-  position: sticky;
   top: 0px;
   margin-right: 1%;
-  word-wrap: normal;
+  word-wrap: break-word;
 }
 
 .project-gallery{
@@ -131,3 +196,39 @@ a.project:hover .project-thumbnail{
   margin: auto;
   margin-bottom: 5%;
 }
+
+/*div declarations for contact icons*/
+.contact-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-list{
+  margin: 0 auto;
+}
+
+.icon-flickr{
+  list-style: none;
+  background-image: url("../fontawesome/svgs/solid/envelope-square.svg");
+  margin: 0;
+	padding: 36px 0 36px 84px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+}
+.icon-mail{
+  list-style: none;
+  background-image: url("../fontawesome/svgs/solid/envelope-square.svg");
+  margin: 0;
+	padding: 36px 0 36px 84px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+
+}
+/*
+.contact-list ul li:nth-child(3){
+  list-style-image: url("../fontawesome/svgs/brands/flickr.svg");
+}
+*/

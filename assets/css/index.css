@@ -4,6 +4,11 @@ body{
   font-size: 0px;
   cursor: default;
   caret-color: transparent;
+  background-color: #000000;
+}
+
+a{
+  outline: none;
 }
 
 .index-info{
@@ -12,8 +17,8 @@ body{
   padding-left: 2%;
   font-size: 24px;
   color: #ffffff;
-  max-width: 38%;
-  max-height: 50%;
+  width: 38%;
+  height: 50%;
   text-overflow: clip;
   word-wrap: normal;
   z-index: 1;
@@ -36,10 +41,13 @@ body{
 }
 
 .index-links a{
-  color: transparent; /*hide text and enable text shadow to display text*/
-  text-shadow: 0 0 0 #ffffff;
+  color: #ffffff; /*hide text and enable text shadow to display text*/
   text-decoration: none;
   cursor: pointer;
+}
+
+.index-links a:hover{
+  color:
 }
 /*target mobile viewports by targeting width, resolution of phones dont matter since they use virtual pixels*/
 
@@ -80,24 +88,6 @@ ul{
   animation: imageAnimation 36s linear infinite 0s;
 }
 
-/*.slideshow li div {
-  z-index: 1000;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  animation: titleAnimation 36s linear infinite 0s;
-}
-.slideshow li div h3 {
-  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-  font-size: 240px;
-  padding: 0px;
-  line-height: 200px;
-}
-*/
 .slideshow li:nth-child(1) span {
   background-image: url(../../images/thumbnails/aresdancemasters.jpg)
 }
@@ -106,38 +96,22 @@ ul{
   animation-delay: 6s;
 }
 .slideshow li:nth-child(3) span {
-  background-image: url(../../images/thumbnails/girllightingfire.jpg);
+  background-image: url(../../images/thumbnails/pairlightingfire.jpg);
   animation-delay: 12s;
 }
 .slideshow li:nth-child(4) span {
-  background-image: url(../../images/thumbnails/hcchoir.jpg);
+  background-image: url(../../images/thumbnails/huangcheng.jpg);
   animation-delay: 18s;
 }
 .slideshow li:nth-child(5) span {
-  background-image: url(../../images/thumbnails/pairlightingfire.jpg);
+  background-image: url(../../images/thumbnails/popgirls.jpg);
   animation-delay: 24s;
 }
 .slideshow li:nth-child(6) span {
-  background-image: url(../../images/thumbnails/wushu.jpg);
+  background-image: url(../../images/thumbnails/labrador.jpg);
   animation-delay: 30s;
 }
 
-/*.slideshow li:nth-child(2) div {
-  animation-delay: 6s;
-}
-.slideshow li:nth-child(3) div {
-  animation-delay: 12s;
-}
-.slideshow li:nth-child(4) div {
-  animation-delay: 18s;
-}
-.slideshow li:nth-child(5) div {
-  animation-delay: 24s;
-}
-.slideshow li:nth-child(6) div {
-  animation-delay: 30s;
-}
-*/
 @keyframes imageAnimation {
   0% { opacity: 0; animation-timing-function: ease-in; }
   8% { opacity: 1; animation-timing-function: ease-out; }
@@ -146,17 +120,22 @@ ul{
   100% { opacity: 0 }
 }
 
-/*@keyframes titleAnimation {
-  0% { opacity: 0 }
-  8% { opacity: 1 }
-  17% { opacity: 1 }
-  19% { opacity: 0 }
-  100% { opacity: 0 }
-}*/
-
-@media screen and (max-width: 1140px) {
-  .slideshow li div h3 { font-size: 140px }
+@media screen and (max-width: 1080px) {
+  .index-info{
+    width: 730px;
+    height: 540px;
+  }
 }
-@media screen and (max-width: 600px) {
-  .slideshow li div h3 { font-size: 80px }
+
+@media screen and (max-width: 730px) {
+  .index-info{
+    width: 100%;
+    padding: 2%;
+    height: 100%;
+    font-size: 18px;
+  }
+
+  .index-info h1{
+    font-size: 36px;
+  }
 }
