@@ -100,11 +100,11 @@ ul{
   animation-delay: 12s;
 }
 .slideshow li:nth-child(4) span {
-  background-image: url(../../images/thumbnails/huangcheng.jpg);
+  background-image: url(../../images/thumbnails/typewriter.jpg);
   animation-delay: 18s;
 }
 .slideshow li:nth-child(5) span {
-  background-image: url(../../images/thumbnails/popgirls.jpg);
+  background-image: url(../../images/thumbnails/hcchoir.jpg);
   animation-delay: 24s;
 }
 .slideshow li:nth-child(6) span {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lato|Libre+Barcode+128+Text|Montserrat&display=swap');
 
 html{
   min-height: 100%;
@@ -12,7 +12,7 @@ body{
   line-height: 1.6;
   color: #454545;
   padding: 0 10px;
-  font-family: "Lucida Sans Unicode";
+  font-family: "Lato";
   font-size: 18px;
   overflow-y: scroll; /*this is to stop scrollbar from resizing the fucking page*/
   outline: none;
@@ -43,7 +43,7 @@ a:hover{
   display: flex;
   justify-content: space-between;
   line-height: 1.0;
-  padding-top: 10px;
+  padding-top: 18px;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -54,11 +54,10 @@ a:hover{
 }
 
 .logo{
-  font-family: 'Libre Barcode 128 Text', cursive;
+  font-family: "Libre Barcode 128 Text", cursive;
   font-size: 48px;
   color: #000000; /*hide text and enable text shadow to display text*/
   cursor: pointer;
-
 }
 
 .logo a:link, a:visited, a:hover{
@@ -67,6 +66,8 @@ a:hover{
 }
 
 .links{
+  font-family: "Montserrat";
+  font-size: 18px;
   word-spacing: 2.0em;
 }
 
@@ -91,19 +92,61 @@ a:hover{
   bottom: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .logo{
+    font-size: 36px;
+  }
+
+  .links{
+    font-size: 12px;
+    /*need to resolve the line height issue to allow for links to be spaced correctly*/
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo{
+    font-size: 24px;
+  }
+
+  .links{
+    font-size: 9px;
+    /*need to resolve the line height issue to allow for links to be spaced correctly*/
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo{
+    font-size: 18px;
+  }
+
+  .links{
+    font-size: 6px;
+    /*need to resolve the line height issue to allow for links to be spaced correctly*/
+  }
+}
+
 /*div declaration for about*/
 .about{
   width: 48%;
   height: auto;
-  float: left;
   padding-right: 2%;
   text-align: justify;
+}
+
+.about-wrapper{
+  margin-top: 40px;
+  max-width: 1200px;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  float: center;
+  caret-color: transparent;
 }
 
 .portrait{
   width: 48%;
   height: auto;
-  float: right;
   text-align: right;
   overflow: hidden;
   padding-left: 2%;
@@ -113,6 +156,23 @@ a:hover{
   width: 100%;
   height: auto;
 }
+
+@media screen and (max-width: 1200px) {
+  .about-wrapper{
+    display: block;
+  }
+
+  .about{
+    width: 100%;
+  }
+
+  .portrait{
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
 /*div declarations for project menu*/
 .project{
   width: 380px;
@@ -130,10 +190,9 @@ a.project:hover .project-thumbnail{
 }
 
 .project-tile{
-  width: 380px;
-  height: 380px;
 
 }
+
 .project-thumbnail{ /*use as class for peektures only*/
   width: 380px;
   height: 380px;
@@ -146,16 +205,18 @@ a.project:hover .project-thumbnail{
 /*thumbnails are actual 380px but divs are not 1200px since its only max specified 1200px*/
 .project-title{
   text-align: center;
+  font-family: "Montserrat";
 }
 
 .project-wrapper{
   margin-top: 40px;
   max-width: 1200px;
   min-height: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  float: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -163,6 +224,30 @@ a.project:hover .project-thumbnail{
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+@media screen and (max-width: 1200px) {
+  .project-wrapper{
+    width: 100%;
+    grid-row-gap: 1.5%
+  }
+
+  .project-tile{
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .project-wrapper{
+    margin-top: 40px;
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
 }
 
 /*div declarations for projects*/
@@ -197,11 +282,50 @@ a.project:hover .project-thumbnail{
   margin-bottom: 5%;
 }
 
+/*div declarations for gallery*/
+.gallery-wrapper{
+  margin-top: 40px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-column{
+  width: 32.5%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-column img{
+  width: 100%;
+  height: auto;
+  padding-bottom: 3.5%;
+}
+
+@media screen and (max-width: 640px) {
+  .gallery-wrapper{
+    display: block;
+  }
+
+  .gallery-column{
+    width: 100%;
+  }
+}
+
 /*div declarations for contact icons*/
 .contact-wrapper{
   width: 100%;
   display: flex;
   flex-direction: column;
+  caret-color: transparent;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .contact-list{
@@ -211,10 +335,27 @@ a.project:hover .project-thumbnail{
 
 .contact-link{
   margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-wrapper a{
+  color: #454545;
+  text-decoration: none;
 }
 
 .icon{
   height: 72px;
   width: 72px;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .icon{
+    height: 48px;
+    width: 48px;
+  }
+
+  .contact-list{
+    font-size: 24px;
+  }
 }
