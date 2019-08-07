@@ -94,26 +94,26 @@ ul{
 }
 
 .slideshow li:nth-child(1) span {
-  background-image: url(../../images/thumbnails/aresdancemasters.jpg)
+  background-image: url(../../images/fullsizes/aresdancemasters.jpg)
 }
 .slideshow li:nth-child(2) span {
-  background-image: url(../../images/thumbnails/sadgirl.jpg);
+  background-image: url(../../images/fullsizes/sadgirl.jpg);
   animation-delay: 6s;
 }
 .slideshow li:nth-child(3) span {
-  background-image: url(../../images/thumbnails/pairlightingfire.jpg);
+  background-image: url(../../images/fullsizes/pairlightingfire.jpg);
   animation-delay: 12s;
 }
 .slideshow li:nth-child(4) span {
-  background-image: url(../../images/thumbnails/typewriter.jpg);
+  background-image: url(../../images/fullsizes/marinabayskyline.jpg);
   animation-delay: 18s;
 }
 .slideshow li:nth-child(5) span {
-  background-image: url(../../images/thumbnails/hcchoir.jpg);
+  background-image: url(../../images/fullsizes/hcchoir.jpg);
   animation-delay: 24s;
 }
 .slideshow li:nth-child(6) span {
-  background-image: url(../../images/thumbnails/labrador.jpg);
+  background-image: url(../../images/fullsizes/shibuyacrossing.jpg);
   animation-delay: 30s;
 }
 
